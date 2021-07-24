@@ -54,7 +54,7 @@ void send_request(void)
  
     curl_easy_setopt(curl_handle, CURLOPT_USERAGENT, "libcurl-agent/1.0");
        
-    headers = curl_slist_append(headers,"token:");
+    headers = curl_slist_append(headers,"token:YFYpKMSCSqIHaIyVoHfYjqnrpUTKURSe");
     curl_easy_setopt(curl_handle, CURLOPT_HTTPHEADER, headers);
 
     res = curl_easy_perform(curl_handle);
