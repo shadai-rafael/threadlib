@@ -30,7 +30,7 @@ WriteMemoryCallback(void *contents, size_t size, size_t nmemb, void *userp)
   return realsize;
 }
 
-void send_request(void)
+struct MemoryStruct send_request(void)
 {
   CURL *curl_handle;
   CURLcode res;
@@ -54,7 +54,7 @@ void send_request(void)
  
     curl_easy_setopt(curl_handle, CURLOPT_USERAGENT, "libcurl-agent/1.0");
        
-    headers = curl_slist_append(headers,"token:");
+    headers = curl_slist_append(headers,"token:YFYpKMSCSqIHaIyVoHfYjqnrpUTKURSe");
     curl_easy_setopt(curl_handle, CURLOPT_HTTPHEADER, headers);
 
     res = curl_easy_perform(curl_handle);
@@ -68,7 +68,7 @@ void send_request(void)
     curl_easy_cleanup(curl_handle);
     
     curl_slist_free_all(headers); 
- 
+	return(chunk);
     free(chunk.memory);
     
   }
