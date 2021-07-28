@@ -1,4 +1,4 @@
-#Copyright 2021 Jason Yair Corona Ventura
+#Copyright 2021 Shadai Rafael Lopez Garcia
 CC=gcc
 CFLAGS= -I ./
 TARGET = MultipleSocketHandling
