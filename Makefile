@@ -1,10 +1,10 @@
-#Copyright 2021 Shadai Rafael Lopez Garcia
+#Copyright 2021 Jason Yair Corona Ventura
 CC=gcc
-CFLAGS= -Wall -Werror -I ./
-TARGET = multithreadedworkqueue
+CFLAGS= -I ./
+TARGET = MultipleSocketHandling
 OBJ = sender.o \
-      main.o
-LIBS = -lcurl
+      MultipleSocketHandling.o
+LIBS = -lcurl -lpthread
 
 all:$(TARGET)
 
@@ -18,4 +18,3 @@ $(TARGET): $(OBJ)
 clean:
 	rm *.o
 	rm $(TARGET)
-
